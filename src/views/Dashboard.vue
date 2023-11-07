@@ -21,7 +21,7 @@
                <div class="h-[calc(100vh-80px)]">
                  <div class="flex justify-between flex-col h-full">
                     <div class="flex flex-col justify-start space-y-10 pt-10 px-5">
-                    <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600">
+                    <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600 duration-700">
                         <router-link to="/dashboard/receive_courrier" active-class="text-green-300">
                             <span>
                             <ion-icon name="albums-outline"></ion-icon>
@@ -30,7 +30,7 @@
                         </router-link>
                     </button>
 
-                    <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600">
+                    <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600 duration-700">
                         <router-link to="/dashboard/sender_courrier" active-class="text-green-300">
                             <span>
                             <ion-icon name="send-outline"></ion-icon>
@@ -38,7 +38,7 @@
                         Enregistrer Départ Courrier
                         </router-link>
                     </button>
-                    <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600">
+                    <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600 duration-700">
                         <router-link to="/dashboard/archive_courrier" active-class="text-green-300">
                             <span>
                             <ion-icon name="archive-outline"></ion-icon>
@@ -57,7 +57,7 @@
                             </div>
 
                         </div>
-                        <div class="bg-red-100 font-bold text-center py-3">
+                        <div class="bg-red-100 font-bold text-center py-3 text-slate-900">
                         Created by : Altaïr VBA
                     </div>
                     </div>
