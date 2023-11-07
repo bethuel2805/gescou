@@ -9,10 +9,14 @@
             <!-- div pour la sidebar -->
             <div class="basis-3/12 bg-slate-200">
                <div class="h-[80px] flex items-center justify-start bg-white">
-                <span class="flex items-center justify-evenly w-full">
-                    <img src="https://acsi.cg/wp-content/uploads/2022/09/logo.png" alt="imageAcsi" class="h-14">
-                    <p class="text-4xl text-slate-800 font-bold">Ges-Cou</p>
-                </span>
+                
+                    <router-link to="/dashboard" class="w-full">
+                    <span class="flex items-center justify-evenly w-full">
+                        <img src="https://acsi.cg/wp-content/uploads/2022/09/logo.png" alt="imageAcsi" class="h-14">
+                       <p class="text-4xl text-slate-800 font-bold">Ges-Cou</p>
+                       </span>
+                    </router-link>
+                
                </div>
                <div class="h-[calc(100vh-80px)]">
                  <div class="flex justify-between flex-col h-full">
