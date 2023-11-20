@@ -26,7 +26,7 @@
                             <span>
                             <ion-icon name="albums-outline"></ion-icon>
                         </span>
-                        Enregistrer Arrivé Courrier
+                        Courrier Arriver
                         </router-link>
                     </button>
 
@@ -35,7 +35,7 @@
                             <span>
                             <ion-icon name="send-outline"></ion-icon>
                         </span>
-                        Enregistrer Départ Courrier
+                        Courrier Départ
                         </router-link>
                     </button>
                     <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600 duration-700">
@@ -43,7 +43,7 @@
                             <span>
                             <ion-icon name="archive-outline"></ion-icon>
                         </span>
-                        Enregistrer Archivage Courrier
+                        Courrier Archiver
                         </router-link>
                     </button>
                 
