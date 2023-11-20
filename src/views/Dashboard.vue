@@ -39,7 +39,7 @@
                         </router-link>
                     </button>
                     <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600 duration-700">
-                        <router-link to="/dashboard/archive_courrier" active-class="text-green-300">
+                        <router-link to="/dashboard/archive_courrier" active-class="text-green-300 w-full flex justify-evenly">
                             <span>
                             <ion-icon name="archive-outline"></ion-icon>
                         </span>
