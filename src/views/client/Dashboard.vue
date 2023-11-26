@@ -1,6 +1,15 @@
 <script setup>
- import CardCourrier from '../components/CardCourrier.vue'
- import DetailCourrier from '../components/DetailCourrier.vue'
+ import CardCourrier from '../../components/CardCourrier.vue'
+ import DetailCourrier from '../../components/DetailCourrier.vue'
+ import {ref} from "vue"
+
+ var dropdownOpen = ref(false)
+
+ function isOpen(){
+    dropdownOpen.value = !dropdownOpen.value
+   // console.log(dropdownOpen.value);
+ }
+
 </script>
 
 <template>
@@ -10,7 +19,7 @@
             <div class="basis-3/12 bg-slate-200">
                <div class="h-[80px] flex items-center justify-start bg-white">
                 
-                    <router-link to="/dashboard" class="w-full">
+                    <router-link to="/client/dashboard" class="w-full">
                     <span class="flex items-center justify-evenly w-full">
                         <img src="https://acsi.cg/wp-content/uploads/2022/09/logo.png" alt="imageAcsi" class="h-14">
                        <p class="text-4xl text-slate-800 font-bold">Ges-Cou</p>
@@ -21,31 +30,24 @@
                <div class="h-[calc(100vh-80px)]">
                  <div class="flex justify-between flex-col h-full">
                     <div class="flex flex-col justify-start space-y-10 pt-10 px-5">
-                    <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600 duration-700">
-                        <router-link to="/dashboard/receive_courrier" active-class="text-green-300">
-                            <span>
-                            <ion-icon name="albums-outline"></ion-icon>
-                        </span>
+                     
+                    <router-link to="/client/dashboard/receive_courrier"
+                     active-class="bg-sky-600 text-white shadow-lg" 
+                     class="border border-gray-500 py-2 rounded-lg text-center text-black text-lg font-bold hover:bg-sky-600 hover:text-white duration-700">
                         Courrier Arriver
-                        </router-link>
-                    </button>
+                    </router-link>
 
-                    <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600 duration-700">
-                        <router-link to="/dashboard/sender_courrier" active-class="text-green-300">
-                            <span>
-                            <ion-icon name="send-outline"></ion-icon>
-                        </span>
+                    <router-link to="/client/dashboard/sender_courrier"
+                     active-class="bg-sky-600 text-white shadow-lg" 
+                     class="border border-gray-500 py-2 rounded-lg text-center text-black text-lg font-bold hover:bg-sky-600 hover:text-white duration-700">
                         Courrier Départ
-                        </router-link>
-                    </button>
-                    <button class="bg-sky-700 py-2 rounded-md px-2 text-lg text-white shadow-2xl hover:bg-sky-600 duration-700">
-                        <router-link to="/dashboard/archive_courrier" active-class="text-green-300 w-full flex justify-evenly">
-                            <span>
-                            <ion-icon name="archive-outline"></ion-icon>
-                        </span>
+                    </router-link>
+                    
+                    <router-link to="/client/dashboard/archive_courrier"
+                     active-class="bg-sky-600 text-white shadow-lg" 
+                     class="border border-gray-500 py-2 rounded-lg text-center text-black text-lg font-bold hover:bg-sky-600 hover:text-white duration-700">
                         Courrier Archiver
-                        </router-link>
-                    </button>
+                    </router-link>
                 
                  </div>
                     <div>
@@ -75,14 +77,22 @@
                     class="w-[75%] py-3 rounded-2xl px-3 border-4"
                     type="search" name="search" id="search" placeholder="Recherchez ici par le numéro du courrier">
                     <div>
-                        <button class="bg-green-600 text-white px-2 py-3 rounded-xl hover:opacity-[0.6]">Enregistrement ici</button>
+                        <button @click="isOpen" class="bg-green-600 text-white px-2 py-3 rounded-xl hover:opacity-[0.6]">Enregistrement ici</button>
+                        <div v-show="dropdownOpen" class="absolute bg-white w-[9em] px-2 py-3 rounded-lg  duration-500">
+                            <ul class="flex space-y-3 flex-col">
+                                <li class="hover:bg-blue-500 px-1 py-2 hover:text-white hover:rounded-lg">
+                                    <router-link to="/dashboard/save_courrier_arriver" @click="isOpen">
+                                        Courrier Arriver
+                                    </router-link>
+                                </li>
+                                <li class="hover:bg-blue-500 px-1 py-2 hover:text-white hover:rounded-lg"><a href="">Courrier Depart</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                </div>
                <div class="h-[calc(100vh-80px)] w-full flex">
-                <router-view>
-                    
-                </router-view>
+                <router-view></router-view>
                </div>
                <!--<div class="h-[calc(100vh-80px)] w-full flex">
                 <div class="basis-2/4 overflow-auto p-2 w-full">

@@ -1,15 +1,15 @@
 <script setup>
-import CardCourrier from "../../components/CardCourrier.vue";
-import DetailCourrier from "../../components/DetailCourrier.vue";
+import CardCourrier from "../../../components/CardCourrier.vue";
+import DetailCourrier from "../../../components/DetailCourrier.vue";
 </script>
 
 <template>
     <div class="h-full w-full flex">
         <div class="basis-2/4 overflow-auto p-2 w-full">
             <div class="flex justify-center">
-                    <span class="text-2xl font-medium text-slate-800">Départ Courrier</span>
+                    <span class="text-2xl font-medium text-slate-800">Archive Courrier</span>
             </div>
-                <div v-for="i in 3" :key="i">
+                <div v-for="i in 2" :key="i">
                     <CardCourrier/>
                 </div>
                </div>

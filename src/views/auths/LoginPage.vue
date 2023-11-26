@@ -14,8 +14,11 @@
                         <input type="password" name="mdp" id="mdp" placeholder="Entrer votre mot de passe"
                          class="border border-2 border-gray-600 w-full py-2 px-2 rounded-lg my-5"><br>
                        
-                        <router-link to="/dashboard">
+                        <router-link to="/client/dashboard">
                             <button class="bg-sky-800 text-white w-full py-3 rounded-lg my-5 hover:opacity-[0.7]">Confirmer</button>
+                        </router-link>
+                        <router-link to="/admin/dashboard">
+                            <button class="bg-green-800 text-white w-full py-3 rounded-lg my-1 hover:opacity-[0.7]">Administrateur</button>
                         </router-link>
                     </form>
                 </div>
